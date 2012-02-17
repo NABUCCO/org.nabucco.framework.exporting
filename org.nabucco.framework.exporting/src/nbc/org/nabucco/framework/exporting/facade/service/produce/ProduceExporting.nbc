@@ -1,0 +1,29 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.service.produce;
+
+import org.nabucco.framework.base.facade.exception.service.ProduceException;
+
+import org.nabucco.framework.exporting.facade.message.ExportConfigurationMsg;
+import org.nabucco.framework.exporting.facade.message.ExportJobMsg;
+
+
+
+@Author				Stefan Welsch
+@Company			PRODYNA AG
+@Date				2010-08-10
+@Version			1.0
+@Description		Produce Service for Exporting
+public Service ProduceExporting {
+	
+	@Description	Creates a new ExportConfiguration.
+    @ManualImplementation
+	public ExportConfigurationMsg produceExportConfiguration() throws ProduceException;
+
+	@Description	Creates a new ExportJob.
+    @ManualImplementation
+	public ExportJobMsg produceExportJob() throws ProduceException;
+		
+}

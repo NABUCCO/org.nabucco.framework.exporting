@@ -1,0 +1,62 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.datatype;
+
+import org.nabucco.framework.base.facade.datatype.Name;
+import org.nabucco.framework.base.facade.datatype.Owner;
+import org.nabucco.framework.base.facade.datatype.DateTime;
+import org.nabucco.framework.base.facade.datatype.Description;
+import org.nabucco.framework.base.facade.datatype.NabuccoDatatype;
+
+import org.nabucco.framework.base.facade.datatype.net.Url;
+
+import org.nabucco.framework.base.facade.datatype.log.LogTrace;
+
+import org.nabucco.framework.exporting.facade.datatype.ExportStateType;
+import org.nabucco.framework.exporting.facade.datatype.ExportConfiguration;
+
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Version		1.0
+@Description	Contains information about an executed export-operation.
+public Datatype ExportJob extends NabuccoDatatype {
+	@Description	Name of the export job.
+	private Basetype Name[1] name;
+
+	@Description	Owner of the export job.
+	private Basetype Owner[1] owner;
+	
+	@Description	Owner of the export job.
+	private Basetype Description[0..1] description;
+
+	@Description	The time the export job was started.
+	private Basetype DateTime[1] startTime;
+	
+	@Description	The time the export job was finished.
+	private Basetype DateTime[1] endTime;
+	
+	@Description	The source data to export
+	private Datatype NabuccoDatatype[1] source;
+	
+	@Description	Log trace of the export job.
+	private Basetype LogTrace[0..1] logTrace;
+	
+	@Description	Error trace of the export job.
+	private Basetype LogTrace[0..1] errorTrace;
+	
+	@Description 	The URL to export the data to
+	private Basetype Url[1] destination;
+	
+	@Description	State of the export job.
+	@Default		NEW
+	private Enumeration ExportStateType[1] state;
+	
+	@Description	Configuration of the export job.
+	@AssociationStrategy Aggregation
+	@FetchStrategy	EAGER
+	private Datatype ExportConfiguration[1] configuration;
+}

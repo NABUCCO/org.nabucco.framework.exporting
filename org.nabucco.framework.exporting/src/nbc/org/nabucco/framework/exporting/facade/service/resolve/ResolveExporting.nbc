@@ -1,0 +1,41 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.service.resolve;
+
+import org.nabucco.framework.base.facade.exception.service.ResolveException;
+import org.nabucco.framework.exporting.facade.message.ExportConfigurationListMsg;
+import org.nabucco.framework.exporting.facade.message.ExportConfigurationMsg;
+import org.nabucco.framework.exporting.facade.message.ExportJobListMsg;
+import org.nabucco.framework.exporting.facade.message.ExportJobMsg;
+
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Version		1.0
+@Description	Resolve Service for Exporting
+public Service ResolveExporting {
+
+	@Inject
+	private EntityManager[1] entityManager;
+
+
+	@ManualImplementation
+	public ExportConfigurationMsg resolveExportConfiguration(ExportConfigurationMsg rqMsg)
+			throws ResolveException;
+
+	@ManualImplementation
+	public ExportConfigurationListMsg resolveExportConfigurationList(ExportConfigurationListMsg rqMsg)
+			throws ResolveException;
+			
+	@ManualImplementation
+	public ExportJobMsg resolveExportJob(ExportJobMsg rqMsg)
+			throws ResolveException;
+
+	@ManualImplementation
+	public ExportJobListMsg resolveExportJobList(ExportJobListMsg rqMsg)
+			throws ResolveException;
+
+}

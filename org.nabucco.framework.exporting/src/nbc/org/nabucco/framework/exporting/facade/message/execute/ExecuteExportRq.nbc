@@ -1,0 +1,30 @@
+/*
+*  PRODYNA NABUCCO
+*  Copyright 2010, PRODYNA AG
+*/
+package org.nabucco.framework.exporting.facade.message.execute;
+
+import org.nabucco.framework.base.facade.datatype.NabuccoDatatype;
+
+import org.nabucco.framework.base.facade.datatype.net.Url;
+
+import org.nabucco.framework.exporting.facade.datatype.ExportConfiguration;
+
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Description	Message that contains the necessary information to start / execute exports.
+@Version		1.0
+public Message ExecuteExportRq {
+	
+	@Description Url where the file(s) will exported.
+	private Basetype Url[0..1] destination;
+
+	@Description	The source data to export
+	private Datatype NabuccoDatatype[0..1] source;
+	
+	@Description Export configuration for the export.
+	private Datatype ExportConfiguration[1..*] configurations;
+	
+}

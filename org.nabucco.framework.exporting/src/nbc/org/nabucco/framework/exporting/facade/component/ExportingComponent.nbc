@@ -1,0 +1,40 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.component;
+
+import org.nabucco.framework.exporting.facade.datatype.ExportConfiguration;
+import org.nabucco.framework.exporting.facade.datatype.ExportConfigurationLink;
+import org.nabucco.framework.exporting.facade.datatype.ExportJob;
+import org.nabucco.framework.exporting.facade.service.execute.ExecuteExporting;
+import org.nabucco.framework.exporting.facade.service.maintain.MaintainExporting;
+import org.nabucco.framework.exporting.facade.service.produce.ProduceExporting;
+import org.nabucco.framework.exporting.facade.service.resolve.ResolveExporting;
+import org.nabucco.framework.exporting.facade.service.search.SearchExporting;
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Version		1.0
+@Description	Component for XML, CSV, etc. exports.. The component was named 'Exporting' as opposed to 'Export', because 'Import' has named 'Importing' (see ImportingComponent)
+public Component ExportingComponent {
+
+	private persistent Datatype ExportConfiguration[1] exportConfiguration;
+	
+	private persistent Datatype ExportConfigurationLink[1] exportConfigurationLink;  
+	
+	private persistent Datatype ExportJob[1] exportJob;
+	
+	public Service ProduceExporting;
+	
+	public Service ResolveExporting;
+	
+	public Service MaintainExporting;
+	
+	public Service SearchExporting;
+	
+	public Service ExecuteExporting;
+	
+
+}

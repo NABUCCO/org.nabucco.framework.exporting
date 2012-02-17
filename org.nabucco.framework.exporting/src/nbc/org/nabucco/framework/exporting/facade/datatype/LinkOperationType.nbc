@@ -1,0 +1,20 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.datatype;
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Version		1.0
+@Description	TODO
+public Enumeration LinkOperationType {
+
+	@LiteralId	A
+	ADD
+	
+	@LiteralId	R
+	REMOVE
+	
+}

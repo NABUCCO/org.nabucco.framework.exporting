@@ -1,0 +1,47 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.message.search;
+
+import org.nabucco.framework.base.facade.datatype.Name;
+import org.nabucco.framework.base.facade.datatype.Data;
+import org.nabucco.framework.base.facade.datatype.Owner;
+import org.nabucco.framework.base.facade.datatype.DateTime;
+import org.nabucco.framework.base.facade.datatype.Description;
+
+import org.nabucco.framework.base.facade.datatype.net.Url;
+
+import org.nabucco.framework.base.facade.datatype.log.LogTrace;
+
+import org.nabucco.framework.exporting.facade.datatype.ExportStateType;
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Version		1.0
+@Description	Search message for searching ExportJob instances / entities
+public Message ExportJobSearchRq {
+
+	@Description	Name of the export job.
+	private Basetype Name[0..1] name;
+
+	private Basetype Owner[0..1] owner;
+	
+	private Basetype Description[0..1] description;
+
+	private Basetype DateTime[0..1] startTime;
+	
+	private Basetype DateTime[0..1] endTime;
+	
+	@Description	Url to the exported file(s).
+	private Basetype Url[0..1] destination;
+	
+	private Basetype LogTrace[0..1] logTrace;
+	
+	private Basetype LogTrace[0..1] errorTrace;
+	
+	private Basetype Data[0..1] outputData;
+
+	private Enumeration ExportStateType[0..1] state;
+}

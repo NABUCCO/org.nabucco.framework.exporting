@@ -1,0 +1,17 @@
+/*
+*  PRODYNA NABUCCO
+*  Copyright 2010, PRODYNA AG
+*/
+package org.nabucco.framework.exporting.ui.command.exportconfig.open;
+
+@Author         Christian Nicolaus
+@Company        PRODYNA AG
+@Date           2010-08-23
+@Description    Opens the corresponding ExportConfigListView
+@Id             org.nabucco.framework.exporting.ui.command.exportconfig.open.OpenCorrespondingExportConfigListViewCommand
+public Command OpenCorrespondingExportConfigListViewCommand {
+
+    @ManualImplementation
+    public void openExportConfigListView();
+
+}

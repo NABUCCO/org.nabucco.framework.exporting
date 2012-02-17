@@ -1,0 +1,33 @@
+package org.nabucco.framework.exporting.ui.list.exportconfig;
+
+import org.nabucco.framework.exporting.facade.datatype.ExportConfiguration;
+
+@Author			Christian Nicolaus
+@Company		PRODYNA AG
+@Date			2010-08-20
+@Description	ListView for ExportConfiguration
+@Id				org.nabucco.framework.exporting.ui.list.exportconfig.ExportConfigurationListView
+public ListView ExportConfigurationListView {
+
+	private Datatype ExportConfiguration[1] exportConfig;
+
+	@MappedField 			exportConfig.owner
+	@ColumnLabelId			exportConfig.owner 
+	@ColumnLabelDefault 	"Owner"
+	private Column owner;
+
+	@MappedField 			exportConfig.name
+	@ColumnLabelId			exportConfig.name 
+	@ColumnLabelDefault 	"Name"
+	private Column name;
+	
+	@MappedField 			exportConfig.description
+	@ColumnLabelId			exportConfig.description 
+	@ColumnLabelDefault 	"Description"
+	private Column description;
+	
+	@MappedField 			exportConfig.scriptName
+	@ColumnLabelId			exportConfig.scriptName 
+	@ColumnLabelDefault 	"Script Name"
+	private Column scriptName;
+}

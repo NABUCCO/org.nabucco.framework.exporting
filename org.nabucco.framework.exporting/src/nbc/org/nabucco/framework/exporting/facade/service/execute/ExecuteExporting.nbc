@@ -1,0 +1,26 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.service.execute;
+
+import org.nabucco.framework.exporting.facade.message.execute.ExecuteExportRq;
+import org.nabucco.framework.exporting.facade.message.execute.ExecuteExportRs;
+import org.nabucco.framework.base.facade.exception.service.ExportException;
+
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Version		1.0
+@Description	Services that are used to start / execute export operations.
+public Service ExecuteExporting {
+
+	@Inject
+	private EntityManager[1] entityManager;
+
+    @ManualImplementation
+	public ExecuteExportRs executeExport(ExecuteExportRq msg)
+		throws ExportException;
+
+}

@@ -1,0 +1,45 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.service.maintain;
+
+import org.nabucco.framework.base.facade.exception.service.MaintainException;
+import org.nabucco.framework.exporting.facade.message.ExportConfigurationListMsg;
+import org.nabucco.framework.exporting.facade.message.ExportConfigurationMsg;
+import org.nabucco.framework.exporting.facade.message.ExportJobListMsg;
+import org.nabucco.framework.exporting.facade.message.ExportJobMsg;
+import org.nabucco.framework.exporting.facade.message.execute.ExportConfigurationLinkRq;
+
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Version		1.0
+@Description	Maintain Service for Exporting
+public Service MaintainExporting {
+
+	@Inject
+	private EntityManager[1] entityManager;
+
+    @ManualImplementation
+	public ExportConfigurationMsg maintainExportConfiguration(ExportConfigurationMsg msg)
+		throws MaintainException;
+
+    @ManualImplementation
+	public ExportConfigurationListMsg maintainExportConfigurationList(ExportConfigurationListMsg msg)
+		throws MaintainException;
+
+	@ManualImplementation
+	public ExportJobMsg maintainExportJob(ExportJobMsg msg)
+		throws MaintainException;
+
+	@ManualImplementation
+	public ExportJobListMsg maintainExportJobList(ExportJobListMsg msg)
+		throws MaintainException;
+		
+	@ManualImplementation
+	public ExportConfigurationMsg linkConfiguration(ExportConfigurationLinkRq msg)
+		throws MaintainException;
+
+}

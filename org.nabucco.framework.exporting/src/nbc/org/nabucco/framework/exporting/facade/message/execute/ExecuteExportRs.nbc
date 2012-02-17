@@ -1,0 +1,24 @@
+/*
+*  PRODYNA NABUCCO
+*  Copyright 2010, PRODYNA AG
+*/
+package org.nabucco.framework.exporting.facade.message.execute;
+
+import org.nabucco.framework.base.facade.datatype.exporting.ExportContainer;
+import org.nabucco.framework.exporting.facade.datatype.ExportJob;
+
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Description	Response message of the executeExport service operation.
+@Version		1.0
+public Message ExecuteExportRs {
+	
+	@Description Contains information about the executed export.
+	private Datatype ExportJob[1..*] executedExportJobs;
+	
+	@Description result as text
+	private Datatype ExportContainer[1] container;
+
+}

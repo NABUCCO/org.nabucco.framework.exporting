@@ -1,0 +1,35 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.message.search;
+
+import org.nabucco.framework.base.facade.datatype.Name;
+import org.nabucco.framework.base.facade.datatype.Owner;
+import org.nabucco.framework.base.facade.datatype.Description;
+
+import org.nabucco.framework.exporting.facade.datatype.ExportType;
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Version		1.0
+@Description	Search message for searching ExportConfiguration instances / entities
+public Message ExportConfigurationSearchRq {
+
+	@Description	Name of the ExportConfiguration.
+	private Basetype Name[0..1] name;
+	
+	@Description	Owner of the ExportConfiguration.
+	private Basetype Owner[0..1] owner;
+	
+	@Description	Description of the ExportConfiguration.
+	private Basetype Description[0..1] description;
+
+	@Description	Name of the used script in the ExportConfiguration.
+	private Basetype Name[0..1] scriptName;
+	
+	@Description	Type of the data to export.
+	private Enumeration ExportType[0..1] exportType;
+	
+}

@@ -1,0 +1,28 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.service.search;
+
+import org.nabucco.framework.base.facade.exception.service.SearchException;
+import org.nabucco.framework.exporting.facade.message.ExportConfigurationListMsg;
+import org.nabucco.framework.exporting.facade.message.ExportJobListMsg;
+import org.nabucco.framework.exporting.facade.message.search.ExportConfigurationSearchRq;
+import org.nabucco.framework.exporting.facade.message.search.ExportJobSearchRq;
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Version		1.0
+@Description	Search Service for Exporting
+public Service SearchExporting {
+
+	@Inject
+	private EntityManager[1] entityManager;
+
+    @ManualImplementation
+	public ExportConfigurationListMsg searchExportConfiguration(ExportConfigurationSearchRq msg) throws SearchException;
+	
+	@ManualImplementation
+	public ExportJobListMsg searchExportJob(ExportJobSearchRq msg) throws SearchException;
+}

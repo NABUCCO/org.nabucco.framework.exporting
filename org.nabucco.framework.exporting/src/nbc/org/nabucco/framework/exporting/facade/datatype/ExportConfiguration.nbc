@@ -1,0 +1,41 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.datatype;
+
+import org.nabucco.framework.base.facade.datatype.Description;
+import org.nabucco.framework.base.facade.datatype.NabuccoDatatype;
+import org.nabucco.framework.base.facade.datatype.Name;
+import org.nabucco.framework.base.facade.datatype.Owner;
+import org.nabucco.framework.exporting.facade.datatype.ExportConfigurationLink;
+import org.nabucco.framework.exporting.facade.datatype.ExportType;
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Version		1.0
+@Description	Configures how an export will be executed internally in Exporting.
+public Datatype ExportConfiguration extends NabuccoDatatype {
+
+	@Description	Name of this configuration. 
+	private Basetype Name[1] name;
+	
+	@Description	Owner of this configuration.
+	private Basetype Owner[1] owner;
+	
+	@Description	Description of this configuration.
+	private Basetype Description[0..1] description;
+
+	@Description	Name of the script (support.scripting) to execute.
+	private Basetype Name[1] scriptName;
+	
+	@Description	Type of the file to export.
+	private Enumeration ExportType[1] exportType;
+	
+	@Description	List of depenended ExportConfigurations (thru ExportConfigurationLink).
+	@FetchStrategy	EAGER
+	private Datatype ExportConfigurationLink[0..*] dependencies; 
+	
+	
+}

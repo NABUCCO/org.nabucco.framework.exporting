@@ -1,0 +1,39 @@
+/*
+*  PRODYNA NABUCCO
+*  Copyright 2010, PRODYNA AG
+*/
+package org.nabucco.framework.exporting.ui.search.exportconfig;
+
+import org.nabucco.framework.exporting.facade.datatype.ExportConfiguration;
+
+@Author			Christian Nicolaus
+@Company		PRODYNA AG
+@Date			2010-08-20
+@Description	search view for an export configuration
+@Id				org.nabucco.framework.exporting.ui.search.exportconfig.ExportConfigSearchView
+public SearchView ExportConfigSearchView {
+
+	private Datatype ExportConfiguration[1] exportConfig;
+	
+	@MappedField 		exportConfig.name
+	@FieldLabelId		exportConfig.name 
+	@FieldLabelDefault 	"Name"
+	private LabeledInputField name;
+	
+	@MappedField 		exportConfig.description
+	@FieldLabelId		exportConfig.description
+	@FieldLabelDefault 	"Description"
+	private LabeledInputField description;
+	
+	@MappedField 		exportConfig.owner
+	@FieldLabelId		exportConfig.owner 
+	@FieldLabelDefault 	"Owner"
+	private LabeledInputField owner;
+	
+	@MappedField 		exportConfig.exportType
+	@FieldLabelId		exportConfig.exportType
+	@FieldLabelDefault 	"Export Type"
+	private LabeledComboBox exportType;
+	
+
+}

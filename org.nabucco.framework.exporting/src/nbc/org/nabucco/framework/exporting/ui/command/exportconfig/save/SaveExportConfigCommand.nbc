@@ -1,0 +1,17 @@
+/*
+*  PRODYNA NABUCCO
+*  Copyright 2010, PRODYNA AG
+*/
+package org.nabucco.framework.exporting.ui.command.exportconfig.save;
+
+@Author			Christian Nicolaus
+@Company		PRODYNA AG
+@Date			2010-08-19
+@Description	Command for saving an export configuration
+@Id				org.nabucco.framework.exporting.ui.command.exportconfig.save.SaveExportConfigCommand
+public Command SaveExportConfigCommand {
+
+	@ManualImplementation
+	public void saveExportConfig();
+
+}

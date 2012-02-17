@@ -1,0 +1,26 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.datatype;
+
+import org.nabucco.framework.base.facade.datatype.NabuccoDatatype;
+import org.nabucco.framework.base.facade.datatype.Number;
+import org.nabucco.framework.exporting.facade.datatype.ExportConfiguration;
+
+@Author			Silas Schwarz
+@Company		PRODYNA AG
+@Date			2011-02-02
+@Version		1.0
+@Description	Links ExportConfigurations together
+public Datatype ExportConfigurationLink extends NabuccoDatatype {
+
+	@Description Link to a ExportConfiguration
+    @AssociationStrategy	COMPOSITION
+	@FetchStrategy			EAGER
+	private Datatype ExportConfiguration[1] config;
+	
+	@Description used to maintain order;
+	private Basetype Number[1] priority; 
+
+}

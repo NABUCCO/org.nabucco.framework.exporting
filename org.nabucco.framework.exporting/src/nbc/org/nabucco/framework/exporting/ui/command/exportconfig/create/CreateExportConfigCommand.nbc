@@ -1,0 +1,17 @@
+/*
+*  PRODYNA NABUCCO
+*  Copyright 2010, PRODYNA AG
+*/
+package org.nabucco.framework.exporting.ui.command.exportconfig.create;
+
+@Author         Christian Nicolaus
+@Company        PRODYNA AG
+@Date           2010-08-25
+@Description    Command for opening the Export Configuration Edit View by clicking into the context menu in navigator view
+@Id             org.nabucco.framework.exporting.ui.command.exportconfig.create.CreateExportConfigCommand
+public Command CreateExportConfigCommand {
+
+    @ManualImplementation
+    public void createExportConfig();
+
+}

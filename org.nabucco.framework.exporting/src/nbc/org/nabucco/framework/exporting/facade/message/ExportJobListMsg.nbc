@@ -1,0 +1,18 @@
+/*
+ *	PRODYNA NABUCCO
+ *  Copyright 2010, PRODYNA AG
+ */
+package org.nabucco.framework.exporting.facade.message;
+
+import org.nabucco.framework.exporting.facade.datatype.ExportJob;
+
+@Author			Stefan Welsch
+@Company		PRODYNA AG
+@Date			2010-08-10
+@Version		1.0
+@Description	Default message for a list of ExportJob objects
+public Message ExportJobListMsg {
+
+	private Datatype ExportJob[0..*] exportJobList;
+	
+}
